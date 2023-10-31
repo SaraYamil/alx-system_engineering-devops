@@ -1,6 +1,6 @@
-# Configuration for ALX School Server 3.89.146.54
+# Configuration for ALX School Serve 54.210.51.121	
 Host school-server
-    Hostname 3.89.146.54
+    Hostname 54.210.51.121
     User ubuntu
     IdentityFile ~/.ssh/school
     PasswordAuthentication no
