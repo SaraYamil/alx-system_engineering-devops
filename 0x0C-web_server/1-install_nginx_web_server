@@ -1,17 +1,18 @@
 #!/usr/bin/env bash
-# Install nginx web server
+# Commands to install Nginx on Web-Sever-01
 
-# Update the package list on the system
-sudo apt -y update
+# Updating Packages before making Installations
+sudo apt-get update
+sudo apt-get -y install nginx
 
-# Install nginx
-sudo apt -y install nginx
+# Configuring the Uncomplicated Firewall (UFW) to allow incoming traffic for the Nginx HTTP service
+sudo ufw allow 'Nginx HTTP'
 
-# Create a custom HTML file with "Hello World!" for default website
-sudo sh -c 'echo "Hello World!" > /var/www/html/index.nginx-debian.html'
+# Creating an index.html page
+echo "Hello World!" | sudo tee /var/www/html/index.html
 
-# Start automatically nginxt at boot
-sudo systemctl enable nginx
+# Testing Nginx configurations for Syntax errors
+sudo nginx -t
 
-# Start nginx service
+# Restarting Nginx
 sudo service nginx start
