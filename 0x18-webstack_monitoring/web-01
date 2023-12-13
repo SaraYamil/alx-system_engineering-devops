@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Server-01 login commands
+
+# Path to identityFile
+identityFile=~/.ssh/school
+
+# Username and IP Address
+ssh -i "$identityFile" ubuntu@34.202.234.238
